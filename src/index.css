@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #F8F3EE;
+  --color-blush: #EAD1D5;
+  --color-dusty-rose: #C98291;
+  --color-deep-rose: #9E4F60;
+  --color-burgundy: #5C1724;
+  --color-wine: #300B13;
+  --color-almost-black: #12090B;
+  --color-warm-white: #FFFDFC;
+  --color-accent-red: #8B1E2D;
+  --color-ink: #201719;
+}
+
+/* Global scroll and smooth transitions */
+html, body {
+  background-color: var(--color-almost-black);
+  color: var(--color-ivory);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom discreet scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 130, 145, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 130, 145, 0.4);
+}
+
+/* Texture classes */
+.paper-texture {
+  background-color: #FFFDFC;
+  background-image: radial-gradient(#201719 0.5px, transparent 0.5px), radial-gradient(#5C1724 0.5px, #FFFDFC 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.98;
+}
+
+.vintage-shadow {
+  box-shadow: 0 20px 40px -15px rgba(18, 9, 11, 0.4),
+              0 0 15px rgba(92, 23, 36, 0.08);
+}
+
+.envelope-shadow {
+  box-shadow: 0 25px 50px -12px rgba(18, 9, 11, 0.5),
+              0 2px 4px rgba(18, 9, 11, 0.2);
+}
+
+/* Custom cinematic film grain */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+}
+
+/* Devanagari typography special styling */
+.font-devanagari-hero {
+  font-family: 'Rozha One', 'Tiro Devanagari Hindi', 'Noto Serif Devanagari', serif;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 35px rgba(139, 30, 45, 0.6);
+}
+
+/* Interactive focus resets */
+button:focus-visible, input:focus-visible {
+  outline: 1px solid rgba(201, 130, 145, 0.4);
+  outline-offset: 2px;
+}
